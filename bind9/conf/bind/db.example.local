@@ -1,0 +1,12 @@
+$TTL    86400
+@   			IN	SOA     	example.local. webmaster.example.local. (
+                    	   		2014092301
+                 	       		21600
+                	        	3600
+                	        	604800
+                	        	86400 )
+@				IN  NS     		example.local.
+@				IN	A			192.168.0.10
+owncloud		IN	A			192.168.0.2
+xbmc			IN	A			192.168.0.3
+subsonic		IN	CNAME		owncloud
