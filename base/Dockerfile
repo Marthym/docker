@@ -12,6 +12,7 @@ RUN sed -i 's/http.debian.net/ftp.fr.debian.org/g' /etc/apt/sources.list && \
 	
 	
 # Update dependency
+RUN touch /etc/inittab
 RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt-get -y update && \ 
 	apt-get -y install runit wget vim-tiny
