@@ -1,4 +1,4 @@
-# Megadrive Emulator GENS
+# Megadrive Emulator Gens/GS
 This docker contain a gens installed inside.
 
 The docker use ssh forwarding for display Gens window so we have no sound.
