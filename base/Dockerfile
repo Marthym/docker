@@ -11,21 +11,17 @@ RUN sed -i 's/http.debian.net/ftp.fr.debian.org/g' /etc/apt/sources.list && \
 	echo "deb http://ftp.fr.debian.org/debian/ jessie contrib non-free" >> /etc/apt/sources.list.d/jessie-non-free.list
 	
 	
-# Update dependency
 RUN touch /etc/inittab
+
+# Update dependency
 RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt-get -y update && \ 
-	apt-get -y install runit wget vim-tiny
-
-RUN rm -Rf /etc/sv/*
-
-RUN echo alias ll=\'ls $LS_OPTIONS -l\' >> .bashrc && \
-	echo alias ll=\'ls $LS_OPTIONS -l\' >> /etc/skel/.bashrc && \
-	echo alias ll=\'ls $LS_OPTIONS -l\' >> /root/.bashrc
-
-CMD /usr/bin/runsvdir -P /etc/sv
-
-# Clean up APT when done.
-RUN apt-get clean && \
+	apt-get -y install runit wget vim-tiny && \
+	apt-get clean && \
 	apt-get autoclean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Remove installed runit services
+RUN rm -Rf /etc/sv/*
+
+CMD ["/usr/bin/runsvdir", "-P", "/etc/sv"]

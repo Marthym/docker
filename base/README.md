@@ -13,3 +13,10 @@ just a base image for other dockers base on debian:jessie
 
 	docker build -t marthym/base:jessie base/
 	
+## Changelog
+
+### 2015-01-03
+
+ * Remove alias ll to reduce layers
+ * Fix the CMD to avoid timeout wait when stopping the container
+
