@@ -12,3 +12,6 @@ Just a small images with DNS server
 ## Gens/GS
 A very pleasant image for those who miss the Megadrive (Mega Genesis).
 A Gens/GS emulator runable through SSH with X11 Forwarding
+
+## nginx-spip
+A Spip install under Nginx
