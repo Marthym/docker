@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Ensure cache directory exist and have right permissions
+mkdir -p /var/spool/squid3 && \
+    chown -R proxy: /var/spool/squid3
+
+# Ensure StoreID program is executable
+chmod +x /usr/local/squid/store-id.pl
+
+# Ensure store_id_db is clean
+cat /usr/local/squid/store_id_db | sed -r -e 's/\s+/\t/g' | sed '/^\#/d' >/usr/local/squid/cleaned_db_file && \
+    rm -f /usr/local/squid/store_id_db && \
+    mv /usr/local/squid/cleaned_db_file /usr/local/squid/store_id_db
+
+/usr/sbin/squid3 -z
+exec /usr/sbin/squid3 -NYC -d 1 -f /etc/squid3/squid.conf
