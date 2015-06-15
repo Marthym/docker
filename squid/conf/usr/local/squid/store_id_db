@@ -868,5 +868,3 @@
 ^http:\/\/debian\.mirror\.uk\.sargasso\.net\/debian\/([a-zA-Z0-9\/\.\-\_]+\.(deb))$	http://debian.mirrors.squid.internal/Archive-http/$1
 ^http:\/\/mirror\.mythic-beasts\.com\/debian\/([a-zA-Z0-9\/\.\-\_]+\.(deb))$	http://debian.mirrors.squid.internal/Archive-http/$1
 ^http:\/\/mordad\.iranrepo\.ir\/debian\/([a-zA-Z0-9\/\.\-\_]+\.(deb))$	http://debian.mirrors.squid.internal/Archive-http/$1
-
-^http:\/\/download\.oracle\.com\/otn\-pub\/java\/([a-zA-Z0-9\/\.\-\_]+\.(tar\.gz))	http://download.oracle.com/otn-pub/java/$1
