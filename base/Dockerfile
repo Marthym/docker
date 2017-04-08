@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:testing-slim
 MAINTAINER marthym@github.com
 
 # Tweak APT
