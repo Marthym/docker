@@ -7,13 +7,12 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt-get -y install \ 
 		texlive-base \ 
 		texlive-xetex \ 
-		texlive-latex-recommended \ 
+		texlive-latex-recommended \
 		texlive-latex-extra \ 
 		texlive-extra-utils \ 
 		texlive-fonts-recommended \ 
 		texlive-font-utils \ 
 		texlive-lang-french \ 
-		texlive-math-extra \ 
 		texlive-pictures \ 
 		latex-xcolor \ 
 		texlive-bibtex-extra \ 
