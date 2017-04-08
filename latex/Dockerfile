@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM marthym/base:1.0.0
 MAINTAINER marthym@github.com
 
 # Update dependency
