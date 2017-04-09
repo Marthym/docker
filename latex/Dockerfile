@@ -5,6 +5,7 @@ MAINTAINER marthym@github.com
 RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt-get -y update && \ 
 	apt-get -y install \ 
+		openssh-client \ 
 		texlive-base \ 
 		texlive-xetex \ 
 		texlive-latex-recommended \
