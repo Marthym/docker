@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /opt/elasticsearch/bin/elasticsearch
+exec su - elastic -c "/opt/elasticsearch/bin/elasticsearch -Edefault.transport.host=127.0.0.1 -Edefault.http.host=0.0.0.0"
