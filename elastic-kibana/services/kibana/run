@@ -1,0 +1,2 @@
+#!/bin/sh
+exec su - elastic -c "/opt/kibana/bin/kibana"
