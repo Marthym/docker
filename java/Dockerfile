@@ -1,4 +1,4 @@
-FROM marthym/base:1.0.0
+FROM marthym/base:1.1.0
 MAINTAINER marthym@github.com
 
 ENV JAVA_VERSION=8u131 \
