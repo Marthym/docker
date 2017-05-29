@@ -1,4 +1,4 @@
-FROM marthym/base:1.1.0
+FROM marthym/base:1.2.0
 MAINTAINER marthym@ght1pc9kc.fr
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
