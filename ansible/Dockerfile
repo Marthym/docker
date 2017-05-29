@@ -1,5 +1,5 @@
 FROM marthym/base:1.1.0
-MAINTAINER marthym@github.com
+MAINTAINER marthym@ght1pc9kc.fr
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt -y update && \ 
