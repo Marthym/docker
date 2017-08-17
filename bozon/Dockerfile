@@ -3,7 +3,7 @@ MAINTAINER marthym@github.com
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt update && \
-    apt install -y --no-install-recommends ca-certificates nginx php php-common php-cli php-fpm unzip && \
+    apt install -y --no-install-recommends ca-certificates nginx php php-common php-cli php-fpm php-zip php-gd php-curl unzip && \
     wget https://github.com/broncowdd/BoZoN/archive/master.zip -O bozon.zip && \
     unzip bozon.zip && \
     mv BoZoN-master/ /var/www/bozon && \
