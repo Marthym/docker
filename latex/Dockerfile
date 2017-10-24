@@ -1,4 +1,4 @@
-FROM marthym/base:1.0.0
+FROM marthym/base:1.2.1
 MAINTAINER marthym@github.com
 
 # Update dependency
