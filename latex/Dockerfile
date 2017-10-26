@@ -1,10 +1,10 @@
-FROM marthym/base:1.2.1
+FROM debian:testing-slim
 MAINTAINER marthym@github.com
 
 # Update dependency
 RUN export DEBIAN_FRONTEND=noninteractive && \
-	apt-get -y update && \ 
-	apt-get -y install \ 
+	apt -y update && \ 
+	apt --no-install-recommends -y install \ 
 		openssh-client \ 
 		texlive-base \ 
 		texlive-xetex \ 
@@ -15,9 +15,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 		texlive-font-utils \ 
 		texlive-lang-french \ 
 		texlive-pictures \ 
-		latex-xcolor \ 
 		texlive-bibtex-extra \ 
-		pgf lmodern biber latexmk ghostscript && \
-	apt-get clean && \
-	apt-get autoclean && \
+		lmodern biber latexmk ghostscript && \
+	apt clean && \
+	apt autoclean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
