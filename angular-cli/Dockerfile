@@ -2,7 +2,8 @@ FROM marthym/base:1.2.1
 MAINTAINER marthym@ght1pc9kc.fr
 
 ENV NODE_VERSION=9.2.0 \
-    NGCLI_VERSION=1.5.2
+    NGCLI_VERSION=1.5.2 \
+    CHROME_BIN=chromium
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt update && \
