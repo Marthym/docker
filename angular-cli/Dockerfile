@@ -1,0 +1,23 @@
+FROM marthym/base:1.2.1
+MAINTAINER marthym@ght1pc9kc.fr
+
+ENV NODE_VERSION=9.2.0 \
+    NGCLI_VERSION=1.5.2
+
+RUN export DEBIAN_FRONTEND=noninteractive && \
+    apt update && \
+    apt install -y --no-install-recommends ca-certificates xz-utils git && \
+
+    wget https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz -O node-v${NODE_VERSION}-linux-x64.tar.xz && \
+    tar xJf node-v${NODE_VERSION}-linux-x64.tar.xz -C /opt && \
+    ln -s /opt/node-v${NODE_VERSION}-linux-x64/bin/node /usr/local/bin/node && \
+    ln -s /opt/node-v${NODE_VERSION}-linux-x64/bin/npm /usr/local/bin/npm && \
+    npm --global install @angular/cli@${NGCLI_VERSION} --unsafe-perm=true --allow-root && \
+    ln -s /opt/node-v${NODE_VERSION}-linux-x64/bin/ng /usr/local/bin/ng && \
+    ng --version && \
+
+    apt purge -y wget ca-certificates xz-utils && \
+    apt autoremove -y && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /tmp/*
