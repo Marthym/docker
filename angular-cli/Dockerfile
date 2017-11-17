@@ -6,7 +6,7 @@ ENV NODE_VERSION=9.2.0 \
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt update && \
-    apt install -y --no-install-recommends ca-certificates xz-utils git && \
+    apt install -y --no-install-recommends ca-certificates xz-utils git chromium && \
 
     wget https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz -O node-v${NODE_VERSION}-linux-x64.tar.xz && \
     tar xJf node-v${NODE_VERSION}-linux-x64.tar.xz -C /opt && \
