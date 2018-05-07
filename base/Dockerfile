@@ -16,7 +16,7 @@ RUN touch /etc/inittab
 # Update dependency
 RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt -y update && \ 
-	apt -y install runit wget vim-tiny procps && \
+	apt -y install runit curl vim-tiny procps && \
 	apt clean && \
 	apt autoclean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
