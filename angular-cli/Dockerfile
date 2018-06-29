@@ -1,8 +1,8 @@
-FROM marthym/base:1.2.1
+FROM marthym/base:1.3.0
 MAINTAINER marthym@ght1pc9kc.fr
 
-ENV NODE_VERSION=9.2.0 \
-    NGCLI_VERSION=1.5.2 \
+ENV NODE_VERSION=10.4.1 \
+    NGCLI_VERSION=6.0.2 \
     CHROME_BIN=chromium
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
