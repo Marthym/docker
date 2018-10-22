@@ -1,4 +1,4 @@
-FROM marthym/base:1.3.0
+FROM marthym/base:1.3.1
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt -y update && \ 
@@ -7,7 +7,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt autoclean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ARG node=8.11.1
+ARG node=10.12.0
 RUN curl -o /tmp/node-${node}-linux-x64.tar.xz "http://nodejs.org/dist/v${node}/node-v${node}-linux-x64.tar.xz" && \
 	tar -C /opt -Jxf /tmp/node-${node}-linux-x64.tar.xz && \
 	mv /opt/node-v${node}-linux-x64 /opt/nodejs && \
