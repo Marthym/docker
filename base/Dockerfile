@@ -1,5 +1,6 @@
 FROM debian:testing-slim
-MAINTAINER marthym@github.com
+LABEL maintainer="marthym@ght1pc9kc.fr" \
+      version="1.4.0"
 
 # Tweak APT
 RUN sed -i 's/http.debian.net/ftp.fr.debian.org/g' /etc/apt/sources.list && \
