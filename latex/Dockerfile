@@ -1,5 +1,5 @@
 FROM debian:testing-slim
-MAINTAINER marthym@github.com
+LABEL maintainer="marthym@github.com"
 
 # Update dependency
 RUN export DEBIAN_FRONTEND=noninteractive && \
