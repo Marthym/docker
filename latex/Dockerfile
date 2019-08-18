@@ -6,6 +6,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt -y update && \ 
 	apt --no-install-recommends -y install \ 
 		openssh-client \ 
+        git \
 		texlive-base \ 
 		texlive-xetex \ 
 		texlive-latex-recommended \
