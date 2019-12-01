@@ -3,13 +3,12 @@ LABEL maintainer="marthym@ght1pc9kc.fr" \
       version="1.5.0"
 
 # Tweak APT
-RUN sed -i 's/http.debian.net/ftp.fr.debian.org/g' /etc/apt/sources.list && \
+RUN sed -i 's/main/main contrib non-free/g' /etc/apt/sources.list && \
 	echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
 	echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
 	echo "APT::Install-Recommends \"0\";" >> /etc/apt/apt.conf.d/99_norecommends && \
 	echo "APT::Install-Suggests \"0\";" >> /etc/apt/apt.conf.d/99_norecommends && \
-	echo "deb http://ftp.debian.org/debian/ wheezy main contrib non-free" >> /etc/apt/sources.list.d/wheezy.list && \
-	echo "deb http://ftp.debian.org/debian/ jessie contrib non-free" >> /etc/apt/sources.list.d/jessie-non-free.list
+	echo "deb http://deb.debian.org/debian stable main contrib non-free" >> /etc/apt/sources.list.d/stable.list
 	
 	
 RUN touch /etc/inittab

@@ -15,6 +15,10 @@ just a base image for other dockers base on debian:testing-slim
 	
 ## Changelog
 
+### 2019-12-01
+
+ * Upgrade Debian
+
 ### 2018-10-22
 
  * Upgrade Debian
