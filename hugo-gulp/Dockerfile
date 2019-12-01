@@ -1,4 +1,4 @@
-FROM marthym/base:1.4.0
+FROM marthym/base:1.5.0
 LABEL maintainer="marthym@ght1pc9kc.fr" \
       version="1.2.0"
 
@@ -9,7 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt autoclean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ARG node=10.12.0
+ARG node=12.13.1
 RUN curl -o /tmp/node-${node}-linux-x64.tar.xz "http://nodejs.org/dist/v${node}/node-v${node}-linux-x64.tar.xz" && \
 	tar -C /opt -Jxf /tmp/node-${node}-linux-x64.tar.xz && \
 	mv /opt/node-v${node}-linux-x64 /opt/nodejs && \
