@@ -1,4 +1,6 @@
-FROM marthym/base:1.3.1
+FROM marthym/base:1.4.0
+LABEL maintainer="marthym@ght1pc9kc.fr" \
+      version="1.2.0"
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
 	apt -y update && \ 
