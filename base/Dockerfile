@@ -1,6 +1,6 @@
 FROM debian:testing-slim
 LABEL maintainer="marthym@ght1pc9kc.fr" \
-      version="1.4.0"
+      version="1.5.0"
 
 # Tweak APT
 RUN sed -i 's/http.debian.net/ftp.fr.debian.org/g' /etc/apt/sources.list && \
